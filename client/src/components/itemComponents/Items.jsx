@@ -10,8 +10,8 @@ const Items = () => {
                             {/* Product image*/}
                             <img
                                 className="card-img-top"
-                                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                                alt="..."
+                                src="../../..//img/1.jpg"
+                                alt="sheet"
                             />
                             {/* Product details*/}
                             <div className="card-body p-4">
