@@ -28,6 +28,9 @@ const Items = () => {
                                     <a className="btn btn-outline-dark mt-auto" href="#">
                                         View options
                                     </a>
+                                    <a className="btn btn-outline-dark mt-auto" href="#">
+                                        Add to cart
+                                    </a>
                                 </div>
                             </div>
                         </div>
