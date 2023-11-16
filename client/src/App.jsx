@@ -1,6 +1,6 @@
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import Navigation from "./components/Navigation"
+import Footer from "./components/footer/Footer"
+import Header from "./components/header/Header"
+import Navigation from "./components/navigation/Navigation"
 import './styles_template.css'
 function App() {
 
