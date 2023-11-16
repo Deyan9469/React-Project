@@ -1421,7 +1421,7 @@ progress {
   }
   .row-cols-xl-4 > * {
     flex: 0 0 auto;
-    width: 25%;
+    width: 30%;
   }
   .row-cols-xl-5 > * {
     flex: 0 0 auto;
@@ -3113,6 +3113,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #212529;
   --bs-gradient: none;
+  margin-right: 2px;
 }
 
 .btn-link {
