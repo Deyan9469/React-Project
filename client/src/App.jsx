@@ -1,3 +1,5 @@
+import {Routes, Route} from 'react-router-dom'
+
 import Footer from "./components/footer/Footer"
 import Header from "./components/header/Header"
 import Navigation from "./components/navigation/Navigation"
@@ -10,7 +12,13 @@ function App() {
     <>
       <Navigation />
       <Header />
-      <Items />
+
+      <Routes>
+        
+      <Route path='/' element={<Items />} />
+      
+      </Routes>
+
       <Footer />
     </>
   )
