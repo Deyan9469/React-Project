@@ -1,4 +1,4 @@
-
+// ../../..//img/1.jpg
 const Items = () => {
     return (
 
@@ -10,7 +10,7 @@ const Items = () => {
                             {/* Product image*/}
                             <img
                                 className="card-img-top"
-                                src="../../..//img/1.jpg"
+                                src="https://res.cloudinary.com/dvyb9owk9/image/upload/v1700247825/Project%20images/rtei36hrnsc5nmcarauu.jpg"
                                 alt="sheet"
                             />
                             {/* Product details*/}
