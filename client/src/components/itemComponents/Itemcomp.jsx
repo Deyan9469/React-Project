@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Items from "./Items";
+import * as servece from "../../serveces/servece";
 
 
-const baseUrl = "http://localhost:3030/jsonstore/bedsheet";
 
 const ItemList = () => {
 
@@ -10,12 +10,8 @@ const ItemList = () => {
 
     useEffect(() => {
 
-        fetch(baseUrl)
-            .then(res => res.json())
-            .then((data) => {
-                setItems();
-                // console.log(Object.values(data))
-            });
+        servece.getAll()
+            .then(result => setItems(result));
     }, []);
 
 
