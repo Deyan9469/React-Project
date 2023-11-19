@@ -1,4 +1,4 @@
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import Footer from "./components/footer/Footer"
 import Header from "./components/header/Header"
@@ -8,20 +8,20 @@ import './styles_template.css'
 function App() {
 
 
-  return (
-    <>
-      <Navigation />
-      <Header />
+    return (
+        <>
+            <Navigation />
+            <Header />
 
-      <Routes>
-        
-      <Route path='/' element={<Items />} />
-      
-      </Routes>
+            <Routes>
 
-      <Footer />
-    </>
-  )
+                <Route path='/' element={<Items />} />
+
+            </Routes>
+
+            <Footer />
+        </>
+    )
 }
 
 export default App
