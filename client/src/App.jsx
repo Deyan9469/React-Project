@@ -5,6 +5,7 @@ import Header from "./components/header/Header"
 import Navigation from "./components/navigation/Navigation"
 import Items from "./components/itemComponents/Items"
 import './styles_template.css'
+import ItemList from './components/itemComponents/Itemcomp'
 function App() {
 
 
@@ -15,7 +16,7 @@ function App() {
 
             <Routes>
 
-                <Route path='/' element={<Items />} />
+                <Route path='/' element={<ItemList />} />
 
             </Routes>
 

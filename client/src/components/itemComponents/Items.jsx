@@ -1,5 +1,14 @@
-// ../../..//img/1.jpg
-const Items = () => {
+
+const Items = (
+    _id,
+    model,
+    material,
+    size,
+    price,
+    parts,
+    color,
+    imageUrl,
+) => {
     return (
 
         <section className="py-5">
@@ -10,16 +19,16 @@ const Items = () => {
                             {/* Product image*/}
                             <img
                                 className="card-img-top"
-                                src="https://res.cloudinary.com/dvyb9owk9/image/upload/v1700247825/Project%20images/rtei36hrnsc5nmcarauu.jpg"
+                                src={imageUrl}
                                 alt="sheet"
                             />
                             {/* Product details*/}
                             <div className="card-body p-4">
                                 <div className="text-center">
                                     {/* Product name*/}
-                                    <h5 className="fw-bolder">Fancy Product</h5>
+                                    <h5 className="fw-bolder">{model}</h5>
                                     {/* Product price*/}
-                                    $40.00 - $80.00
+                                    {price}
                                 </div>
                             </div>
                             {/* Product actions*/}
