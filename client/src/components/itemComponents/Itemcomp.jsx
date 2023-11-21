@@ -1,27 +1,25 @@
 import { useEffect, useState } from "react";
 import Items from "./Items";
-import * as servece from "../../serveces/servece";
-
+import * as requestService from "../../services/service";
 
 
 const ItemList = () => {
-
     const [item, setItems] = useState([]);
 
     useEffect(() => {
-
-        servece.getAll()
-            .then(result => setItems(result));
+      requestService.getAll()
+      .then(data=>{setItems(data)});
     }, []);
+console.log(item)
 
+    // return (
+    //     <>
+    //         {item.map(card =>(
+    //             <Items key={card._id} {...card} />
+    //         ))}
 
-    return (
-        <>
-            {item.map((card) =>
-                <Items key={card._id} {...card} />
-            )}
-        </>
-    );
+    //     </>
+    // );
 
 }
 
