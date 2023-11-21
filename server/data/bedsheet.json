@@ -8,35 +8,5 @@
 	"color": "grey",
         "imageUrl": "https://res.cloudinary.com/dvyb9owk9/image/upload/v1700247825/Project%20images/rtei36hrnsc5nmcarauu.jpg",
         "_id": "3564027f-adcd-4425-b2c0-1253d2386c0c"
-    },
-    "c64db398-91cd-487c-b900-86058c0422f8": {
-        "model": "Plain",
-        "material": "Satin Cotton",
-	"size": "200x220cm",
-        "price": "60$",
-	"parts": "4",
-	"color": "blue",
-        "imageUrl": "https://res.cloudinary.com/dvyb9owk9/image/upload/v1700247824/Project%20images/rrthccglwl9jubwcrxyv.jpg",
-        "_id": "3564027f-adcd-4425-b2c0-1253d2386c0c"
-    },
-    "daf55cd4-9aa1-4b7a-82a9-fbdb74aaa84b": {
-        "model": "Plain",
-        "material": "Satin Cotton",
-	"size": "200x220cm",
-        "price": "60$",
-	"parts": "4",
-	"color": "grey",
-        "imageUrl": "https://res.cloudinary.com/dvyb9owk9/image/upload/v1700247824/Project%20images/vs68vf4oguwr0updficv.jpg",
-        "_id": "3564027f-adcd-4425-b2c0-1253d2386c0c"
-    },
-    "18bfdb21-333b-42bd-a32c-c114263f2569": {
-        "model": "Plain",
-        "material": "Satin Cotton",
-	"size": "200x220cm",
-        "price": "60$",
-	"parts": "4",
-	"color": "grey",
-        "imageUrl": "https://res.cloudinary.com/dvyb9owk9/image/upload/v1700247824/Project%20images/hv9ufren3q4da33ffbhf.jpg",
-        "_id": "3564027f-adcd-4425-b2c0-1253d2386c0c"
     }
 }
