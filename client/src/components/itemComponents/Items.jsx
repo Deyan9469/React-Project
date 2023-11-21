@@ -1,6 +1,5 @@
 
 const Items = (
-    _id,
     model,
     material,
     size,

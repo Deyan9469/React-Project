@@ -12,14 +12,14 @@ const ItemList = () => {
     }, []);
 console.log(item)
 
-    // return (
-    //     <>
-    //         {item.map(card =>(
-    //             <Items key={card._id} {...card} />
-    //         ))}
+    return (
+        <>
+            {item.map(card =>(
+                <Items key={card._id} {...card} />
+            ))}
 
-    //     </>
-    // );
+        </>
+    );
 
 }
 
