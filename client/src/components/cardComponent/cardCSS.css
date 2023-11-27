@@ -14,7 +14,14 @@
 }
 .btn-primary {
     margin: 0 1.1em;
+    color: black;
+    background-color: whitesmoke;
+    border-color: black;
+    --bs-btn-hover-bg: black;
+    --bs-btn-border-color: black;
+     --bs-btn-hover-border-color: black;
 }
+
 
 .card-title , p.card-text {
     display: flex;
