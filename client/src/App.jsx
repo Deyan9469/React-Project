@@ -7,6 +7,7 @@ import './styles_template.css'
 import CardItems from './components/cardComponent/RoutingItems'
 import About from './components/about/About'
 import Contacts from './components/contacts/Contacts'
+import Login from './components/login/Login'
 function App() {
 
 
@@ -20,6 +21,7 @@ function App() {
                 <Route path='/' element={<CardItems />} />
                 <Route path='/about' element={<About />} />
                 <Route path='/contacts' element={<Contacts />} />
+                <Route path='/login' element={<Login />} />
 
             </Routes>
 
