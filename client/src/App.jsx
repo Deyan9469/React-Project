@@ -8,6 +8,7 @@ import CardItems from './components/cardComponent/RoutingItems'
 import About from './components/about/About'
 import Contacts from './components/contacts/Contacts'
 import Login from './components/login/Login'
+import Register from './components/register/Register'
 function App() {
 
 
@@ -22,6 +23,7 @@ function App() {
                 <Route path='/about' element={<About />} />
                 <Route path='/contacts' element={<Contacts />} />
                 <Route path='/login' element={<Login />} />
+                <Route path='/register' element={<Register />} />
 
             </Routes>
 

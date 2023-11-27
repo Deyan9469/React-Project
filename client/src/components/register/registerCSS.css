@@ -1,0 +1,7 @@
+form.registerForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 2em;
+}
