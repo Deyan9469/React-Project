@@ -1,0 +1,22 @@
+.card {
+    margin: 1em;
+}
+.cardHolder {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    padding: 1em;
+}
+.card-img-top{
+    width: 100%;
+    height: 14em;
+}
+.btn-primary {
+    margin: 0 1.1em;
+}
+
+.card-title , p.card-text {
+    display: flex;
+    justify-content: space-evenly;
+}

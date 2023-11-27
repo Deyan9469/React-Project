@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Items from "./Items";
 import * as requestService from "../../services/service";
+import CardComp from "./Card";
 
 
-const ItemList = () => {
+const CardItems = () => {
     const [item, setItems] = useState([]);
 
     useEffect(() => {
@@ -14,14 +14,13 @@ const ItemList = () => {
     console.log(item)
 
     return (
-        <>
-        
+        <div className="cardHolder">
             {item.map(card => (
-                <Items key={card._id} {...card} />
+                <CardComp key={card._id} {...card} />
             ))}
-        </>
+        </div>
     );
 
 }
 
-export default ItemList;
+export default CardItems;
