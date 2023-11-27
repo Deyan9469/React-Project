@@ -5,6 +5,8 @@ import Header from "./components/header/Header"
 import Navigation from "./components/navigation/Navigation"
 import './styles_template.css'
 import CardItems from './components/cardComponent/RoutingItems'
+import About from './components/about/About'
+import Contacts from './components/contacts/Contacts'
 function App() {
 
 
@@ -16,6 +18,8 @@ function App() {
             <Routes>
 
                 <Route path='/' element={<CardItems />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/contacts' element={<Contacts />} />
 
             </Routes>
 

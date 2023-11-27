@@ -7,7 +7,7 @@ const Header = () => {
                     <div className="text-center text-white">
                         <h1 className="display-4 fw-bolder">Shop in style</h1>
                         <p className="lead fw-normal text-white-50 mb-0">
-                            With this shop hompeage template
+                            Your are going to love them BedSheets!
                         </p>
                     </div>
                 </div>

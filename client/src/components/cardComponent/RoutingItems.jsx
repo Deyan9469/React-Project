@@ -11,7 +11,6 @@ const CardItems = () => {
             .then(data => { setItems(data) });
     }, []);
 
-    console.log(item)
 
     return (
         <div className="cardHolder">
