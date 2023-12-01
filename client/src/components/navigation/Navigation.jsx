@@ -44,7 +44,7 @@ const Navigation = () => {
                                 {/* // TO DOO Create!!! */}
 
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/" onClick={Logout}>
+                                    <Link className="nav-link active" aria-current="page" to="/" >
                                         Logout
                                     </Link>
                                 </li>
