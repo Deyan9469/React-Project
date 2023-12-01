@@ -1,12 +1,18 @@
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import  AuthContext  from '../../contexts/authContext';
+import Logout from '../logout/Logout';
 
 const Navigation = () => {
+
+    const { isAuthenticated, username, } = useContext(AuthContext);
+
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container px-4 px-lg-5">
                     <Link className="navbar-brand" to="/">
-                        Start Bootstrap
+                        Bedsheets 4 You
                     </Link>
                     <button
                         className="navbar-toggler"
@@ -31,21 +37,33 @@ const Navigation = () => {
                                     About
                                 </Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/login">
-                                    Login
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/register">
-                                    Register
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="#!">
-                                    Logout
-                                </Link>
-                            </li>
+                            {isAuthenticated ?
+                                <>
+
+                                <li className="nav-item"><span>{username}</span></li>
+                                {/* // TO DOO Create!!! */}
+
+                                <li className="nav-item">
+                                    <Link className="nav-link active" aria-current="page" to="/" onClick={Logout}>
+                                        Logout
+                                    </Link>
+                                </li>
+                                </>
+                                :
+                                <>
+                                    <li className="nav-item">
+                                        <Link className="nav-link active" aria-current="page" to="/login">
+                                            Login
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link active" aria-current="page" to="/register">
+                                            Register
+                                        </Link>
+                                    </li>
+                                </>
+                            }
+
                         </ul>
                         <form className="d-flex">
                             <button className="btn btn-outline-dark" type="submit">
