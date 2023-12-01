@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import  AuthContext  from '../../contexts/authContext';
-import Logout from '../logout/Logout';
 
 const Navigation = () => {
 
@@ -44,7 +43,7 @@ const Navigation = () => {
                                 {/* // TO DOO Create!!! */}
 
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/" >
+                                    <Link className="nav-link active" aria-current="page" to="/logout"  >
                                         Logout
                                     </Link>
                                 </li>
