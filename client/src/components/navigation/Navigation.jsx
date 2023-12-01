@@ -11,7 +11,7 @@ const Navigation = () => {
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container px-4 px-lg-5">
                     <Link className="navbar-brand" to="/">
-                        Bedsheets 4 You
+                        Bedsheets4You
                     </Link>
                     <button
                         className="navbar-toggler"
