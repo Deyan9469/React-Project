@@ -28,7 +28,6 @@ function Register() {
                 <Form.Control
                     type="email"
                     placeholder="Enter email"
-                    id="email"
                     name="email"
                     onChange={onChange}
                     values={values[RegisterFormKeys.Email]}
@@ -40,7 +39,6 @@ function Register() {
                 <Form.Control
                     type="password"
                     placeholder="Password"
-                    id="register-password"
                     name="password"
                     onChange={onChange}
                     values={values[RegisterFormKeys.Password]}
@@ -52,7 +50,6 @@ function Register() {
                 <Form.Control
                     type="password"
                     placeholder="Password"
-                    id="confirm-password"
                     name="confirm-password"
                     onChange={onChange}
                     values={values[RegisterFormKeys.ConfirmPassword]}

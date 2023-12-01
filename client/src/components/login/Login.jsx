@@ -28,7 +28,6 @@ function Login() {
                 <Form.Control
                     type="email"
                     placeholder="Enter email"
-                    id="email"
                     name={LoginFormKyes.Email}
                     onChange={onChange}
                     value={values[LoginFormKyes.Email]}
@@ -43,7 +42,6 @@ function Login() {
                 <Form.Control
                     type="password"
                     placeholder="Password"
-                    id="login-password"
                     name={LoginFormKyes.Password}
                     onChange={onChange}
                     value={values[LoginFormKyes.Password]}
