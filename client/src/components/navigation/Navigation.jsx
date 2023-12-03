@@ -47,6 +47,11 @@ const Navigation = () => {
                                         Logout
                                     </Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link active" aria-current="page" to="/create"  >
+                                        Create
+                                    </Link>
+                                </li>
                                 </>
                                 :
                                 <>

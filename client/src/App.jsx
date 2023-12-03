@@ -12,6 +12,7 @@ import Contacts from './components/contacts/Contacts'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
 import Logout from './components/logout/Logout'
+import CreateCard from './components/create/CreateCard'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                     <Route path='/login' element={<Login />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/logout' element={<Logout />} />
+                    <Route path='/create' element={<CreateCard />} />
 
                 </Routes>
 
