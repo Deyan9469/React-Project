@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
-import  AuthContext  from '../../contexts/authContext';
+import AuthContext from '../../contexts/authContext';
 
 const Navigation = () => {
 
@@ -39,19 +39,19 @@ const Navigation = () => {
                             {isAuthenticated ?
                                 <>
 
-                                <li className="nav-item"><span>{username}</span></li>
-                                {/* // TO DOO Create!!! */}
+                                    <li className="nav-item"><span>{username}</span></li>
+                                    {/* // TO DOO Create!!! */}
 
-                                <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/logout"  >
-                                        Logout
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/create"  >
-                                        Create
-                                    </Link>
-                                </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link active" aria-current="page" to="/logout"  >
+                                            Logout
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link active" aria-current="page" to="/create"  >
+                                            Create
+                                        </Link>
+                                    </li>
                                 </>
                                 :
                                 <>
@@ -67,6 +67,11 @@ const Navigation = () => {
                                     </li>
                                 </>
                             }
+                            <li className="nav-item">
+                                <Link className="nav-link active" aria-current="page" to="/comments"  >
+                                    Comments
+                                </Link>
+                            </li>
 
                         </ul>
                         <form className="d-flex">
