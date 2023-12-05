@@ -13,6 +13,7 @@
     height: 14em;
 }
 .btn-primary {
+    width: 36%;
     margin: 0 1.1em;
     color: black;
     background-color: whitesmoke;

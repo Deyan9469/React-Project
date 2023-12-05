@@ -32,22 +32,22 @@ export default function CreateCard() {
             <form id="create" onSubmit={createSubmitHandler}>
                 <div className="card-container">
                     <h1>Create your post</h1>
-                    <label htmlFor="Model">Model:</label>
+                    <label htmlFor="Model">Model</label>
                     <input type="text" id="model" name="model" placeholder="Enter Model..." />
 
-                    <label htmlFor="Material">Material:</label>
+                    <label htmlFor="Material">Material</label>
                     <input type="text" id="material" name="material" placeholder="Enter Material..." />
 
-                    <label htmlFor="Size">Size:</label>
+                    <label htmlFor="Size">Size</label>
                     <input type="text" id="size" name="size" min="1" placeholder="200x200cm" />
 
-                    <label htmlFor="price">Price:</label>
+                    <label htmlFor="price">Price</label>
                     <input type="text" id="price" name="price" placeholder="Enter price with like 20$" />
 
-                    <label htmlFor="color">color:</label>
+                    <label htmlFor="color">Color</label>
                     <input type="text" id="color" name="color" placeholder="Enter color" />
 
-                    <label htmlFor="imageUrl">imageUrl:</label>
+                    <label htmlFor="imageUrl">Image Url</label>
                     <input type="text" id="imageUrl" name="imageUrl" placeholder="Enter imageUrl" />
 
                     <input className="btn submit" type="submit" value="Create Post" />
