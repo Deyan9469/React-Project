@@ -1,7 +1,46 @@
+import { useContext, useEffect, useState } from "react";
+
+import * as requestService from "../../services/commentService";
+import AuthContext from '../../contexts/authContext';
 
 import "./commentsCSS.css"
+import useForm from "../../hook/useForm";
 
-function Comments() {
+const Comments = () => {
+    const { isAuthenticated, username, userId } = useContext(AuthContext);
+    const [comments, setComments] = useState([]);
+
+    useEffect(() => {
+        requestService.getAll()
+            .then(data => { setComments(data) });
+    }, []);
+
+    const addCommentHandler = async (values) => {
+
+        const newComment = await requestService.create(
+            userId,
+            username,
+            values.comment,
+        );
+
+        setComments(state => [...state, newComment]);
+
+    };
+
+    const deleteButtonClickHandler = async () => {
+
+        const hasConfirmed = confirm(`Are you sure you want to delete`);
+
+        if (hasConfirmed) {
+
+            await requestService.remove(userId);
+
+        }
+    }
+
+    const { values, onChange, onSubmit } = useForm(addCommentHandler, {
+        comment: '',
+    });
 
     return (
 
@@ -10,26 +49,36 @@ function Comments() {
                 <h2 className="commentHeader">Comments</h2>
             </div>
             <hr />
-            <div className="row comment">
-                <div className="head">
-                    <small><strong className="user">Diablo25</strong> 30.10.2017 12:13</small>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non lorem elementum, accumsan magna sed, faucibus mauris. Nulla pellentesque ante nibh, ac hendrerit ante fermentum sed. Nunc in libero dictum, porta nibh pellentesque, ultrices dolor. Curabitur nunc ipsum, blandit vel aliquam id, aliquam vel velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed sit amet mi dignissim, pretium justo non, lacinia libero. Nulla facilisi. Donec id sem velit. </p>
-            </div>
-            <div className="row comment">
-                <div className="head">
-                    <small><strong className="user">Giesche</strong> 30.10.2017 12:13</small>
-                </div>
-                <p>Praesent molestie ante nec metus convallis aliquam. Ut aliquam tincidunt mollis. Maecenas et ex sit amet est vehicula ultrices sed sit amet elit. Suspendisse potenti. Aenean et quam ut purus convallis porttitor. Mauris porttitor pretium elementum. Duis blandit elit tincidunt ipsum ultricies, ut faucibus lorem facilisis. Proin ipsum turpis, pharetra in lorem ac, porta ullamcorper velit. Proin gravida odio eget elit ultricies sodales. Vivamus vel tincidunt ligula. Proin pulvinar pellentesque velit eget luctus. Aliquam vitae enim ut purus vestibulum sollicitudin sit amet eget lacus. Nunc tempus fringilla tincidunt. </p>
+            <div className="row comment" >
+
+                {comments.map(({ _id, username, content, _ownerId }) => (
+                    <div className="comment-container" key={_id}>
+                        <div  className="head" >
+                            <small><strong className="user">{username}</strong> 30.10.2017 12:13</small>
+                        </div>
+                        <p>{content}</p>
+                        {_ownerId === userId && (
+                            <button className="del-button" onClick={deleteButtonClickHandler}>Delete</button>
+                        )}
+
+                    </div>
+
+                ))}
+                {comments.length === 0 && (
+                    <p className="no-comment">No comments.</p>
+                )}
             </div>
             <hr />
-            <div className="row" id="addcomment">
-            <label>Add new comment:</label>
-                <form className="form">
-                    <textarea className="form-control" placeholder="Comment content..." value={""}  /><br />
+            {isAuthenticated && (
+                <div className="row" id="addcomment">
+                <label>Add new comment:</label>
+                <form className="form" onSubmit={onSubmit} >
+                    <textarea className="form-control" name="comment" value={values.comment} onChange={onChange} placeholder="Comment content..." /><br />
                     <button className="btn btn-primary">Send</button>
                 </form>
             </div>
+            )}
+            
         </div>
 
     );
