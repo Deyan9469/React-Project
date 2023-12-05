@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import AuthContext from '../../contexts/authContext';
-
+import "./userCSS.css"
 const Navigation = () => {
 
     const { isAuthenticated, username, } = useContext(AuthContext);
@@ -39,8 +39,7 @@ const Navigation = () => {
                             {isAuthenticated ?
                                 <>
 
-                                    <li className="nav-item"><span>{username}</span></li>
-                                    {/* // TO DOO Create!!! */}
+                                    <li className="nav-item-username"><span className='user'>{username}</span></li>
 
                                     <li className="nav-item">
                                         <Link className="nav-link active" aria-current="page" to="/logout"  >
