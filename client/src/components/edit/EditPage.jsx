@@ -26,12 +26,18 @@ const EditPage = () => {
 
         const values = Object.fromEntries(new FormData(e.currentTarget));
 
+        const data = Object.values(values);
+
+        if (data.some(x => x === "")) {
+            return alert("All fields are required!");
+        }
+
         try {
-            await requestService.edit(cardId, values)
+            await requestService.edit(cardId, values);
 
             navigate('/');
-        } catch {
-            throw new Error('Check all inputs')
+        } catch (err) {
+            throw new Error(err);
         }
     }
 
