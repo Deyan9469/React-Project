@@ -5,8 +5,10 @@ import AuthContext from '../../contexts/authContext';
 
 import "./commentsCSS.css"
 import useForm from "../../hook/useForm";
+import { useNavigate } from "react-router-dom";
 
 const Comments = () => {
+    const navigate = useNavigate();
     const { isAuthenticated, username, userId } = useContext(AuthContext);
     const [comments, setComments] = useState([]);
 
@@ -24,16 +26,19 @@ const Comments = () => {
         );
 
         setComments(state => [...state, newComment]);
+        values.comment = "";
 
     };
 
-    const deleteButtonClickHandler = async () => {
+    const deleteButtonClickHandler = async (e) => {
 
         const hasConfirmed = confirm(`Are you sure you want to delete`);
+       
+        const targetedComment = e.currentTarget.value;
 
         if (hasConfirmed) {
 
-            await requestService.remove(userId);
+            await requestService.remove(targetedComment);
 
         }
     }
@@ -52,18 +57,19 @@ const Comments = () => {
             <div className="row comment" >
 
                 {comments.map(({ _id, username, content, _ownerId }) => (
-                    <div className="comment-container" key={_id}>
-                        <div  className="head" >
+                    <div className="comment-container"  key={_id}>
+                        <div className="head" >
                             <small><strong className="user">{username}</strong> 30.10.2017 12:13</small>
                         </div>
                         <p>{content}</p>
                         {_ownerId === userId && (
-                            <button className="del-button" onClick={deleteButtonClickHandler}>Delete</button>
+                            <button className="del-button" value={_id} onClick={deleteButtonClickHandler}>Delete</button>
                         )}
 
                     </div>
 
                 ))}
+
                 {comments.length === 0 && (
                     <p className="no-comment">No comments.</p>
                 )}
@@ -71,14 +77,14 @@ const Comments = () => {
             <hr />
             {isAuthenticated && (
                 <div className="row" id="addcomment">
-                <label>Add new comment:</label>
-                <form className="form" onSubmit={onSubmit} >
-                    <textarea className="form-control" name="comment" value={values.comment} onChange={onChange} placeholder="Comment content..." /><br />
-                    <button className="btn btn-primary">Send</button>
-                </form>
-            </div>
+                    <label>Add new comment:</label>
+                    <form className="form" onSubmit={onSubmit} >
+                        <textarea className="form-control" name="comment" value={values.comment} onChange={onChange} placeholder="Comment content..." /><br />
+                        <button className="btn btn-primary">Send</button>
+                    </form>
+                </div>
             )}
-            
+
         </div>
 
     );
