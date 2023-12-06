@@ -12,6 +12,7 @@ const Comments = () => {
     const { isAuthenticated, username, userId } = useContext(AuthContext);
     const [comments, setComments] = useState([]);
 
+    console.log(comments)
     useEffect(() => {
         requestService.getAll()
             .then(data => { setComments(data) });
@@ -24,7 +25,6 @@ const Comments = () => {
             username,
             values.comment,
         );
-
         setComments(state => [...state, newComment]);
         values.comment = "";
 
@@ -38,7 +38,17 @@ const Comments = () => {
 
         if (hasConfirmed) {
 
-            await requestService.remove(targetedComment);
+            try{
+                await requestService.remove(targetedComment);
+
+                setComments(currentComment =>
+                    currentComment.filter(comment => {
+                        return comment._id !== targetedComment;
+                    }))
+
+            }catch(err){
+                throw new Error(err)
+            };
 
         }
     }

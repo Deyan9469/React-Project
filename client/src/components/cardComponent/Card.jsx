@@ -4,8 +4,6 @@ import Card from 'react-bootstrap/Card';
 import { Link, } from 'react-router-dom';
 import { useContext } from 'react';
 import AuthContext from '../../contexts/authContext';
-import * as requestService from '../../services/service';
-
 
 
 const CardComp = ({
@@ -16,15 +14,9 @@ const CardComp = ({
     material,
     _ownerId,
     _id,
+    onRemoveHandler,
 }) => {
     const { isAuthenticated, userId } = useContext(AuthContext);
-   
-
-    const onRemove = () => {
-        
-        requestService.remove(_id);
-
-    }
 
 
     return (
@@ -33,7 +25,7 @@ const CardComp = ({
             <Card.Body>
                 <Card.Title>Model: {model}</Card.Title>
                 <Card.Text>Material: {material}</Card.Text>
-                <Card.Text>Material: {color}</Card.Text>
+                <Card.Text>Color: {color}</Card.Text>
                 <Card.Text>Price: {price}</Card.Text>
                 <Button as={Link} to='/about' variant='primary'>Details</Button>
 
@@ -45,7 +37,7 @@ const CardComp = ({
                 {userId === _ownerId && (
                     <>
                         <Button as={Link} to={`/edit/${_id}`} variant='primary'>Edit</Button>
-                        <Button variant='primary' onClick={onRemove}>Delete</Button>
+                        <Button variant='primary' onClick={()=>onRemoveHandler(_id)}>Delete</Button>
                     </>
                 )}
 
