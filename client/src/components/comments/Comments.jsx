@@ -11,8 +11,16 @@ const Comments = () => {
     const navigate = useNavigate();
     const { isAuthenticated, username, userId } = useContext(AuthContext);
     const [comments, setComments] = useState([]);
+    const [currentDate, setCurrentDate] = useState(getDate());
 
-    console.log(comments)
+    function getDate() {
+        const today = new Date();
+        const month = today.getMonth() + 1;
+        const year = today.getFullYear();
+        const date = today.getDate();
+        return `${month}/${date}/${year}`;
+      }
+
     useEffect(() => {
         requestService.getAll()
             .then(data => { setComments(data) });
@@ -69,7 +77,7 @@ const Comments = () => {
                 {comments.map(({ _id, username, content, _ownerId }) => (
                     <div className="comment-container"  key={_id}>
                         <div className="head" >
-                            <small><strong className="user">{username}</strong> 30.10.2017 12:13</small>
+                            <small><strong className="user">{username}</strong>{currentDate}</small>
                         </div>
                         <p>{content}</p>
                         {_ownerId === userId && (
