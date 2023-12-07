@@ -13,7 +13,7 @@ const Comments = () => {
     const [comments, setComments] = useState([]);
     const [currentDate, setCurrentDate] = useState(getDate());
 
-    function getDate() {
+    const getDate = () => {
         const today = new Date();
         const month = today.getMonth() + 1;
         const year = today.getFullYear();
