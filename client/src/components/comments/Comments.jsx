@@ -19,7 +19,7 @@ const Comments = () => {
         const year = today.getFullYear();
         const date = today.getDate();
         return `${month}/${date}/${year}`;
-      }
+    }
 
     useEffect(() => {
         requestService.getAll()
@@ -41,12 +41,12 @@ const Comments = () => {
     const deleteButtonClickHandler = async (e) => {
 
         const hasConfirmed = confirm(`Are you sure you want to delete`);
-       
+
         const targetedComment = e.currentTarget.value;
 
         if (hasConfirmed) {
 
-            try{
+            try {
                 await requestService.remove(targetedComment);
 
                 setComments(currentComment =>
@@ -54,7 +54,7 @@ const Comments = () => {
                         return comment._id !== targetedComment;
                     }))
 
-            }catch(err){
+            } catch (err) {
                 throw new Error(err)
             };
 
@@ -75,7 +75,7 @@ const Comments = () => {
             <div className="row comment" >
 
                 {comments.map(({ _id, username, content, _ownerId }) => (
-                    <div className="comment-container"  key={_id}>
+                    <div className="comment-container" key={_id}>
                         <div className="head" >
                             <small><strong className="user">{username}</strong>{currentDate}</small>
                         </div>
