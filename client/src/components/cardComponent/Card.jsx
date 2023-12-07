@@ -1,3 +1,5 @@
+import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+
 import './cardCSS.css'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -27,11 +29,11 @@ const CardComp = ({
                 <Card.Text>Material: {material}</Card.Text>
                 <Card.Text>Color: {color}</Card.Text>
                 <Card.Text>Price: {price}</Card.Text>
-                <Button as={Link} to='/about' variant='primary'>Details</Button>
+                <Button as={Link} to={`/carddDetails/${_id}`} variant='primary'>Details</Button>
 
                 {isAuthenticated && (
                     <>
-                        <Button variant='primary'>Add cart</Button>
+                        <Button variant='primary'>Add <i class="fa-solid fa-cart-plus"></i></Button>
                     </>
                 )}
                 {userId === _ownerId && (
