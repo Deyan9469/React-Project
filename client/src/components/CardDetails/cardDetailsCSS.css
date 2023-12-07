@@ -1,0 +1,15 @@
+
+
+.btn-body.card-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.btn{
+    border: solid 1px black;
+}
+.btn:hover{
+    color: white;
+    background-color: black;
+    border: solid 1px black;
+}
