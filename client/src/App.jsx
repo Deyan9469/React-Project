@@ -15,7 +15,7 @@ import Logout from './components/logout/Logout'
 import CreateCard from './components/create/CreateCard'
 import Comments from './components/comments/Comments'
 import EditPage from './components/edit/EditPage'
-import CardDetails from './components/CardDetails/CardDetails'
+import CardDetails from './components/cardDetails/CardDetails'
 import AuthGuard from './components/guards/AuthGuard'
 
 
