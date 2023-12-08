@@ -37,7 +37,7 @@ const CardComp = ({
                 {userId === _ownerId && (
                     <>
                         <Button as={Link} to={`/edit/${_id}`} variant='primary'>Edit</Button>
-                        <Button variant='primary' onClick={()=>onRemoveHandler(_id)}>Delete</Button>
+                        <Button variant='primary' onClick={() => onRemoveHandler(_id)}>Delete</Button>
                     </>
                 )}
 

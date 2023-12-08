@@ -1,5 +1,3 @@
-import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
-
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import "./cardDetailsCSS.css"
@@ -45,7 +43,7 @@ const CardDetails = () => {
             </ListGroup>
             <Card.Body className='btn-body'>
                 <Card.Link className ="btn" as={Link} to="/">Home</Card.Link>
-                <Card.Link className ="btn" href="#">Add <i class="fa-solid fa-cart-plus"></i></Card.Link>
+                <Card.Link className ="btn" href="#">Purchase</Card.Link>
             </Card.Body>
         </Card>
         </div>

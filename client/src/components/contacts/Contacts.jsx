@@ -8,7 +8,7 @@ const Contacts = () =>{
             <h2> Contact us </h2>
 
             <ul>
-                <li><i class="fa-solid fa-building"></i> BigBusiness&CO</li>
+                <li><i className="fa-solid fa-building"></i> BigBusiness&CO</li>
                 <li><i className="fa-solid fa-envelope"></i> BigBusiness&CO@abv.bg</li>
                 <li><i className="fa-solid fa-phone"></i> Phone: +359 666 555 333</li>
                 <li><i className="fa-solid fa-location-dot"></i><a href={locationUrl}> BigBusiness&CO</a></li>
