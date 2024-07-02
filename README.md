@@ -14,7 +14,7 @@ To start the project you will need:
 From there Vite will generate <http://localhost:3000>, click it and view my project for bedsheets shop.
 
 # Idea :sparkles:
-   <br> The idea of the project is for users to view and add bedsheets to sell.
+   <br> The idea of the project is for users to view and add bedsheets to sell, (but the cart functionality is "work in progress").
 
 # Functionality :star:
 The server that I'm using is from, "SoftUni" [practice server]( https://github.com/softuni-practice-server/softuni-practice-server) :octocat:. 
