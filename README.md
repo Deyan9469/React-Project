@@ -1,6 +1,6 @@
 # Introduction :blush:
 Hello, this is my Project for Soft-Uni called Bedsheet4You, a user-friendly UI/UX application.
-For the project I am using Vite + React
+<br>For the project I am using Vite + React
 
 https://github.com/Deyan9469/React-Project/assets/123094953/e60dcd4a-a03c-449d-a65d-f78cad920fbc
 
