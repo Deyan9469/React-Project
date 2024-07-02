@@ -11,6 +11,7 @@ const EditPage = () => {
         model: '',
         material: '',
         size: '',
+        parts:'',
         price: '',
         color: '',
         imageUrl: '',
@@ -62,6 +63,9 @@ const EditPage = () => {
 
                     <label htmlFor="Size">Size</label>
                     <input type="text" id="size" name="size" min="1" value={cardInfo.size} onChange={onChange} placeholder="200x200cm" />
+                    
+                    <label htmlFor="Size">Parts</label>
+                    <input type="text" id="parts" name="parts" min="1" value={cardInfo.parts} onChange={onChange} placeholder="1-6 parts" />
 
                     <label htmlFor="price">Price</label>
                     <input type="text" id="price" name="price" value={cardInfo.price} onChange={onChange} placeholder="Enter price with like 20$" />

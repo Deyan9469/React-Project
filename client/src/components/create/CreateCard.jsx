@@ -41,6 +41,9 @@ export default function CreateCard() {
                     <label htmlFor="Size">Size</label>
                     <input type="text" id="size" name="size" min="1" placeholder="200x200cm" />
 
+                    <label htmlFor="Size">Parts</label>
+                    <input type="text" id="parts" name="parts" min="1" placeholder="1-6 pats" />
+
                     <label htmlFor="price">Price</label>
                     <input type="text" id="price" name="price" placeholder="Enter price with like 20$" />
 
